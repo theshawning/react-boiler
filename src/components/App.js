@@ -1,4 +1,6 @@
 import React from 'react'
+import { Home } from '../pages/index'
+import { Switch, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -15,9 +17,9 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-        <div>
-          hello world
-        </div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
     </>
   )
 }
